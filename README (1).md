@@ -281,7 +281,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For issues and questions:
 - Create GitHub Issue
-- Email: support@agrisenseai.com
+- Email: tusharkapoor052@gmail.com
 - Documentation: [docs/project_report.md](docs/project_report.md)
 
 ---
