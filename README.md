@@ -132,7 +132,58 @@ Sustainable-Crop-Recommendation/
 ├── .gitignore                        # Ignore cache, venv, etc.
 
 ```
+---
+## Challenges Faced in the Project
 
+During the development of the Sustainable Crop Recommendation System, several challenges were encountered at different stages of the project. These challenges are highlighted below:
+
+1. Data Collection
+
+Collecting reliable and farm-level data was one of the major challenges. While the Kaggle dataset used for training was clean, real-world data such as government soil health cards often contained missing or incomplete entries (e.g., pH, nitrogen, phosphorus, and potassium values). Additionally, weather data sourced from APIs sometimes had gaps or required paid access for complete historical records.
+
+2. Data Preprocessing and Integration
+
+Integrating soil, weather, and crop data into a single dataset proved difficult. Different sources used varied formats (CSV, Excel, JSON), units (mm vs cm for rainfall), and time frequencies (daily weather vs yearly soil test reports). Careful preprocessing was required to ensure consistency and correctness.
+
+3. Class Imbalance
+
+The dataset was skewed towards commonly grown crops such as rice, maize, and wheat, while minor or region-specific crops had fewer examples. This imbalance risked biasing the model toward recommending popular crops instead of promoting diverse and sustainable crop options.
+
+4. Feature Engineering
+
+Creating additional features that represent sustainability, such as soil fertility index, water requirement scores, and crop rotation benefits, was a challenge. These features were not directly available in the dataset and required a mix of domain knowledge and research to design meaningfully.
+
+5. Model Training
+
+Training the model presented multiple challenges:
+
+The risk of overfitting due to the relatively small dataset.
+
+The need to select suitable algorithms (Random Forest, SVM, or XGBoost) and tune hyperparameters carefully.
+
+Hardware limitations, as training large models with combined soil and weather datasets was resource-intensive on standard laptops.
+
+6. Model Evaluation
+
+Although the models achieved high accuracy, validating their real-world applicability was difficult. A model might recommend a crop that is statistically suitable, but in practice, factors such as pests, irrigation availability, and market demand may reduce feasibility. Ensuring interpretability of results (explaining why a crop was recommended) was also essential to build trust among end users.
+
+7. Deployment
+
+Deploying the solution for farmers introduced its own set of difficulties:
+
+Many farmers lack access to high-end devices, requiring the application to be lightweight and mobile-friendly.
+
+Rural areas often face unreliable internet connectivity, which could affect the usability of an online recommendation tool.
+
+Integrating live weather APIs added recurring costs and dependency issues.
+
+8. Domain Knowledge Gap
+
+Agricultural expertise was necessary to validate whether the ML-driven recommendations were practical in real-world farming conditions. Some predictions made sense statistically but could fail due to ground realities such as pest infestations, local crop preferences, or fluctuating market prices, which fall outside the scope of the dataset.
+
+
+
+---
 ## Future Improvements
 
 1. Build a Streamlit web app for easy farmer access.
