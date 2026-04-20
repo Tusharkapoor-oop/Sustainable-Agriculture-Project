@@ -197,4 +197,4 @@ Agricultural expertise was necessary to validate whether the ML-driven recommend
 ## Author
 
 TUSHAR KAPOOR 
-B.Tech CSE (AI & ML) | Internship Project
+B.Tech CSE (AI & ML) 
